@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: chasewilsonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: chasewilsonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: chasewilsonpipelinesjavascriptdocker 
+          image: chasecontainerregistry.azurecr.io/chasewilsonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
